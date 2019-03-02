@@ -1,0 +1,184 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+  max-width: 1000px;
+  position: relative;
+  max-height: 800px;
+}
+
+
+.marquee {
+  font-family: 'Inconsolata', monospace;
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1;
+  overflow: hidden;
+  background: #4E00FF;
+  color: #fff;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2000vw);
+  }
+}
+
+.marquee span {
+  /*   add linear so it doesn't speed up */
+  animation: moveLeft 400s infinite linear;
+	/* ensures the text stays all on the same line*/
+  white-space: nowrap;
+  display: block;
+  position: relative;
+}
+
+body{
+  font-family: 'Yatra One', cursive;
+  color: #4E00FF;
+  background: #FCE8EC;
+  height: 100vh;
+}
+
+.main-photo img{
+    position: absolute;
+    max-height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-block{
+  margin-left: 5px;
+}
+p{
+  font-size: 20px;
+  padding-left: 10px;
+  line-height: 1.2;
+}
+
+.footer{
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+a{
+  color: inherit;
+}
+
+a:hover{
+  color: #4E00FF;
+  background: #fff;
+}
+
+h1{
+  white-space: normal;
+  font-size: 60px;
+  line-height: 1;
+}
+
+div.peach {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 10px; 
+  right: 10px;
+  z-index: 100;
+}
+
+.fit{
+  max-height: 260px;
+}
+
+.flex-start{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  float: left;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  
+}
+  
+.draggable.is-dragging { opacity: 0.7; }
+
+.draggable{
+ cursor: grab;
+}
+
+@media(max-width: 700px){
+
+  .title-block{
+    max-width: 90%;
+    margin: 0 10px;
+  }
+  .main-photo img{
+    max-height: 60vh;
+  }
+  
+  .fit {
+    max-width: 120px;
+  }
+  
+  .black{
+    max-width: 150px;
+  }
+  
+  .flex-start{
+    margin-top: 20px;
+  flex-direction: column;
+    margin-left: 0;
+}
+
+
+.flex-end{
+  margin-top: 20px;
+  flex-direction: column;
+  position: fixed;
+  right: -50px;
+}
+  
+  img:nth-child(2){
+    margin-top: -60px;
+    margin-left: 20px;
+  }
+  img:nth-child(3){
+    margin-top: -10px;
+    margin-left: 20px;
+  }
+  
+  
+.marquee span {
+  animation: moveLeft 100s infinite;
+
+  }
+}
